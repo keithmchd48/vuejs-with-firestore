@@ -6,9 +6,9 @@
         <button @click="addToDo">Add</button>
         <div v-if="errors" id="errors">{{errors}}</div>
         <div v-if="toDoItems && toDoItems.length">
-            <div class="title">Todos that need t be done today</div>
+            <div class="title">Todos that need to be done today</div>
             <div v-for="item in toDoItems" :key="item.id">
-                {{item.title}} <small style="text-decoration: underline" @click="deleteTodo">Delete</small>
+                {{item.title}} <small style="text-decoration: underline; cursor: pointer;" @click="deleteTodo(item.id)">Delete</small>
             </div>
         </div>
     </div>
@@ -49,7 +49,17 @@ export default {
                 this.errors = 'Enter a To do Task!'
             }
         },
-        deleteTodo () {}
+        deleteTodo (id) {
+            if (id) {
+                db.collection('items').doc(id).delete().then(() => {
+                    this.errors = 'Item Deleted!'
+                }).catch(e => {
+                    this.errors = e
+                })
+            } else {
+                this.errors = 'No Id Found!'
+            }
+        }
     }
 }
 </script>
