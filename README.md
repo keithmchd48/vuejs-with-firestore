@@ -15,6 +15,8 @@ npm run serve
 npm run build
 ```
 
-This repo is hosted at https://5d4fd135e55638af5a334e93--angry-keller-1f246f.netlify.com/
+Netlify Hosting: https://5d4fd135e55638af5a334e93--angry-keller-1f246f.netlify.com/
+
+Firebase Hosting: https://vue-firebase-fa9c0.firebaseapp.com/
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
