@@ -16,3 +16,4 @@ npm run build
 ```
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+This repo is hosted at https://5d4fd135e55638af5a334e93--angry-keller-1f246f.netlify.com/
