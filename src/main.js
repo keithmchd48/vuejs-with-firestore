@@ -2,7 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 // import router from './router'
 import store from './store/index'
-import firebase from 'firebase'
+import * as firebase from 'firebase/app';
+import 'firebase/firestore'
 
 Vue.config.productionTip = false;
 const firebaseConfig = {
